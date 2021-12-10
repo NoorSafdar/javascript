@@ -22,12 +22,16 @@ var q = new Questions(questions_array[i].question, questions_array[i].ans, quest
 add_questions.push(q);
 }
 
-console.log(add_questions[0].question + " ");
-console.log("Options: " +add_questions[0].answers + " ");
+
+console.log(add_questions[0].question);
+console.log(add_questions[0].answers[0]);
+console.log(add_questions[0].answers[1]);
+console.log(add_questions[0].answers[2]);
 selected_option = prompt("Choose the correct option(1, 2, 3)");
 if (selected_option == add_questions[0].correct) {
   console.log("YOur answer is right");
 } else {
   console.log("YOur answer is not right");
 }
+
 
