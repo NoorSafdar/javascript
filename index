@@ -1,0 +1,33 @@
+
+questions_array = [
+{question: "Q1: I __ reading", options: ['1.is ', '2.are', '3.am'], ans:3},
+{question: "Q2: I __ read", options: ["1.has ", "2.have ", "3.am"], ans:2},
+{question: "Q3: He __ reading", options: ["1.was ", "2.were ", "3.am"], ans:1},
+{question: "Q4: He __ done", options: ["1.has ", "2.have", "3.am"], ans:1},
+{question: "Q5: I __ reading since morning", options: ["1.have ", "2.has ", "3.have been"], ans:3},
+]
+add_questions = [];
+
+class Questions{
+	constructor(question, correct, answers){
+		this.question = question;
+		this.answers = answers;
+		this.correct = correct;
+	}
+}
+
+
+for(var i in questions_array){
+var q = new Questions(questions_array[i].question, questions_array[i].ans, questions_array[i].options);
+add_questions.push(q);
+}
+
+console.log(add_questions[0].question + " ");
+console.log("Options: " +add_questions[0].answers + " ");
+selected_option = prompt("Choose the correct option(1, 2, 3)");
+if (selected_option == add_questions[0].correct) {
+  console.log("YOur answer is right");
+} else {
+  console.log("YOur answer is not right");
+}
+
