@@ -23,15 +23,15 @@ add_questions.push(q);
 }
 
 
-console.log(add_questions[0].question);
-console.log(add_questions[0].answers[0]);
-console.log(add_questions[0].answers[1]);
-console.log(add_questions[0].answers[2]);
+var num = Math.floor(Math.random() * 5);
+console.log(add_questions[num].question);
+console.log(add_questions[num].answers[0]);
+console.log(add_questions[num].answers[1]);
+console.log(add_questions[num].answers[2]);
 selected_option = prompt("Choose the correct option(1, 2, 3)");
-if (selected_option == add_questions[0].correct) {
+if (selected_option == add_questions[num].correct) {
   console.log("YOur answer is right");
 } else {
   console.log("YOur answer is not right");
 }
-
 
