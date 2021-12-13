@@ -23,15 +23,15 @@ add_questions.push(q);
 }
 
 
-var num = Math.floor(Math.random() * 5);
-console.log(add_questions[num].question);
-console.log(add_questions[num].answers[0]);
-console.log(add_questions[num].answers[1]);
-console.log(add_questions[num].answers[2]);
+for(var i in add_questions){
+  console.log(add_questions[i].question);
+console.log(add_questions[i].answers[0]);
+console.log(add_questions[i].answers[1]);
+console.log(add_questions[i].answers[2]);
 selected_option = prompt("Choose the correct option(1, 2, 3)");
-if (selected_option == add_questions[num].correct) {
+if (selected_option == add_questions[i].correct) {
   console.log("YOur answer is right");
 } else {
   console.log("YOur answer is not right");
 }
-
+}
