@@ -32,6 +32,6 @@ selected_option = prompt("Choose the correct option(1, 2, 3)");
 if (selected_option == add_questions[i].correct) {
   console.log("YOur answer is right");
 } else {
-  console.log("YOur answer is not right");
+  console.log("YOur answer is not right"); 
 }
 }
