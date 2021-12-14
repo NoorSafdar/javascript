@@ -1,5 +1,4 @@
 
-
 questions_array = [
 {question: "Q1: I __ reading", options: ['1.is ', '2.are', '3.am'], ans:3},
 {question: "Q2: I __ read", options: ["1.has ", "2.have ", "3.am"], ans:2},
@@ -29,11 +28,18 @@ console.log(add_questions[num].question);
 console.log(add_questions[num].answers[0]);
 console.log(add_questions[num].answers[1]);
 console.log(add_questions[num].answers[2]);
-setTimeout(function(){ 
-  selected_option = prompt("Choose the correct option(1, 2, 3)");
-  if (selected_option == add_questions[num].correct) {
-  console.log("YOur answer is right");
-} else {
-  console.log("YOur answer is not right");
-}
- }, 3000);
+console.log("Press Enter to answer");
+
+
+
+ document.onkeyup = giveAnswer;
+
+
+    function giveAnswer() {
+      selected_option = prompt("Choose the correct option(1, 2, 3)");
+    if (selected_option == add_questions[num].correct) {
+    console.log("YOur answer is right");
+  } else {
+    console.log("YOur answer is not right");
+   }
+    }
